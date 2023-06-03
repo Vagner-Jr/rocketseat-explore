@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#hero {
+  width: 590px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+img {
+  margin-bottom: 72px;
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-weight: normal;
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+}
+
+.only {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7D7987;
+}
+
+span , a {
+  color: #FF9900;
+}
+
+hr {
+  border: 1px solid;
+}
+
+#line {
+  width: 590px;
+  height: 0;
+  margin: 0 auto;
+  border-top: 1px solid #ECEFF2;
+}
+
+footer a + a {
+  margin-left: 24px;
+}
+
+.balls {
+  position: fixed;
+  bottom: -70px;
+  right: 0;
+}
