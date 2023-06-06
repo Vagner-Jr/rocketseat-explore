@@ -21,7 +21,25 @@
       <main>
         <form action="/" method="get">
           <fieldset>
-            <legend>Informações do evento</legend>
+            <div id="fieldset-wrapper">
+              <legend>Informações do evento</legend>
+              <div class="input-wrapper">
+                <label for="title">Título do evento <span>(mínimo 8 carateres)</span></label>
+                <input type="text" id="title">
+              </div>
+              <div class="input-wrapper">
+                <label for="link">Link do envio <span>(comece com https://)</span></label>
+                <input type="text" id="link ">
+              </div>
+              <div class="input-wrapper">
+                <label for="whatsapp">Whatsapp para contato <span>(somente núemros)</span></label>
+                <input type="text" id="link ">
+              </div>
+              <div class="input-wrapper">
+                <label for="whatsapp">Informações extra</label>
+                <textarea name="link" id="link"></textarea>
+              </div>
+            </div>
           </fieldset>
         </form>
       </main>
