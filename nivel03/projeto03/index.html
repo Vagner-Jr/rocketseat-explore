@@ -20,7 +20,7 @@
         <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
       </header>
       <main>
-        <form action="/" method="get">
+        <form action="/" method="get" id="event">
           <fieldset>
             <div class="fieldset-wrapper">
               <legend>Informações do evento</legend>
@@ -49,7 +49,7 @@
               <div class="input-wrapper">
                 <label for="category">Categoria</label>
                 <select id="link">
-                  <option value=""></option>
+                  <option value="">Tipo de envento</option>
                   <option value="podcast">Podcast</option>
                   <option value="live">Ao vivo</option>
                 </select>
@@ -59,14 +59,43 @@
           <fieldset>
             <div class="fieldset-wrapper">
               <legend>Privacidade</legend>
+              <div class="input-wrapper">
+                <label for="email"
+                  >E-mail do adminitrador <span>(digite um e-mail válido)</span></label
+                >
+                <input type="email" id="email" />
+              </div>
+              <div class="input-wrapper">
+                <label for="password"
+                  >Senha de acesso para os participantes <span>(mínimo 8 carateres)</span></label
+                >
+                <input type="password" id="password" />
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox">Evento privado</label>
+              </div>
             </div>
           </fieldset>
           <fieldset>
             <div class="fieldset-wrapper">
               <legend>Data e hora</legend>
+              <div class="input-wraper">
+                <label for="date">Data</label>
+                <input type="date" id="date">
+              </div>
+              <div class="input-wraper">
+                <label for="star-time">Data</label>
+                <input type="time" id="star-time">
+              </div>
+              <div class="input-wraper">
+                <label for="end-time">Data</label>
+                <input type="time" id="end-time">
+              </div>
             </div>
           </fieldset>
         </form>
+        <button form="event">Salvar evento</button>
       </main>
     </div>
   </body>
