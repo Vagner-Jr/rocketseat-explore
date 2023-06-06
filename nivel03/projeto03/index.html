@@ -22,7 +22,7 @@
       <main>
         <form action="/" method="get">
           <fieldset>
-            <div id="fieldset-wrapper">
+            <div class="fieldset-wrapper">
               <legend>Informações do evento</legend>
               <div class="input-wrapper">
                 <label for="title">Título do evento <span>(mínimo 8 carateres)</span></label>
@@ -42,13 +42,23 @@
               </div>
               <div class="input-wrapper">
                 <label for="category">Categoria</label> 
-                <img class="arrow-select" src="./assets/arrow.svg" alt="seta do compo select">
                 <select id="link">
                   <option value=""></option>
                   <option value="podcast">Podcast</option>
                   <option value="live">Ao vivo</option>
                 </select>
+                </div>
               </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="fieldset-wrapper">
+              <legend>Privacidade</legend>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="fieldset-wrapper">
+              <legend>Data e hora</legend>
             </div>
           </fieldset>
         </form>
