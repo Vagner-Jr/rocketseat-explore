@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Avaliação da Mentoria</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
@@ -22,7 +22,31 @@
           alt="imagem minimalista de um balão de conversa com estrelas"
         />
       </header>
-      <form id="star-form" action="/" method="get"></form>
+      <form id="star-form" action="/" method="get">
+        <fieldset id="person-info">
+          <div class="fieldset-wrapper">
+            <legend>informações pessoais</legend>
+            <div class="input-wrapper">
+              <div id="names">
+                <div>
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" required />
+                </div>
+                <div>
+                  <label for="surname">Sobrenome</label>
+                  <input type="text" id="surname" required />
+                </div>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="email"
+                >E-mail <span>(digite um e-mail válido)</span></label
+              >
+              <input type="email" id="email" required minlength="8" />
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
   </body>
 </html>
