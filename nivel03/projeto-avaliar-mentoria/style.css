@@ -13,6 +13,7 @@
 } 
 
 body {
+  font-family: 'Poppins', sans-serif;
   background: var(--bg-light-blue);
 }
 
@@ -23,4 +24,24 @@ body::before {
   position: absolute;
   z-index: -1;
   background: var(--bg-dark-blue);
+}
+
+#app {
+  padding: 100px 0;
+}
+
+h1 , legend {
+  font-family: 'Staatliches';
+  font-weight: 400;
+}
+
+header {
+  width: 720px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+header img {
+  margin: 24px 0 32px;
 }
