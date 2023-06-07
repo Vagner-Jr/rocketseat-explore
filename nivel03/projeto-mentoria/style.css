@@ -9,3 +9,137 @@
   --bg-secundary: #535971;
   --bg-details: #FF5374;
 }
+
+body {
+  color: var(--bg-primary);
+  background: var(--bg-primary);
+}
+
+body * {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 , legend , button {
+  font-family: 'Staatliches';
+  font-weight: 400;
+} 
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 436px;
+  position: absolute;
+  z-index: -1;
+  background: var(--bg-secundary)
+}
+
+#app {
+  width: 760px;
+  margin: auto;
+  padding: 80px 0 0;
+}
+
+header {
+  width: 420px;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+header p {
+  margin-bottom: 56px;
+  font-size: 20px;
+}
+
+form {
+  padding: 14px 64px 64px;
+  border-radius: 20px 20px 0 0;
+  color: var(--bg-secundary);
+  background: #FFF;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  margin: 40px 0 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E6E6F0;
+  font-size: 24px;
+}
+
+label {
+  font-size: 14px;
+}
+
+span {
+  font-size: 12px;
+  color: #a6a6af;
+}
+
+input {
+  color: #81818a;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#mentor-info .input-wrapper , #person-info .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper #names {
+  display: flex;
+  gap: 22px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  background: #FAFAFC;
+}
+
+.button {
+  margin-bottom: 80px;
+  padding: 48px 72px;
+  border-radius: 0 0 20px 20px;
+  background: var(--bg-secundary);
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  border: none;
+  color: var(--bg-primary);
+  background: var(--bg-details);
+}
+
+#agenda-info .input-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+#agenda-info .input-wrapper > div div:first-child {
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+h2:nth-child(2) {
+  margin-top: 16px;
+}
