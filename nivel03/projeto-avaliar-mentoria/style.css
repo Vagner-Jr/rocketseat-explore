@@ -11,3 +11,16 @@
   --color-white: #fff;
   --color-dark-blue: #253B51;
 } 
+
+body {
+  background: var(--bg-light-blue);
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 480px;
+  position: absolute;
+  z-index: -1;
+  background: var(--bg-dark-blue);
+}
