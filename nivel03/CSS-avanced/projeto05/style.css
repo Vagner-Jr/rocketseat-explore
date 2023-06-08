@@ -24,7 +24,7 @@ body {
 #app {
   max-width: 33rem;
   margin: 0 auto;
-  padding: 10rem 0 8rem;
+  padding: 10rem 2rem 8rem;
 }
 
 header {
@@ -62,8 +62,8 @@ img {
 
 .card img {
   height: 40rem;
-  object-fit: cover;
   border-radius: .6rem;
+  object-fit: cover;
   filter: brightness(0.8) blur(1px);
   transition: .3s ease;
 }
@@ -96,4 +96,37 @@ img {
   font-weight: 400;
   color: var(--bg-secundary-dark);
   background: var(--bg-white);
+}
+
+@media (min-width: 720px) {
+  #app {
+    max-width: 1170px;
+  }
+
+  header h1 {
+    font-size: 5.2rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas: 
+    'card1 card2 card2'
+    'card3 card3 card4';
+  }
+
+  main div:nth-child(1) {
+    grid-area: card1;
+  }
+  
+  main div:nth-child(2) {
+    grid-area: card2;
+  }
+  
+  main div:nth-child(3) {
+    grid-area: card3;
+  }
+
+  main div:nth-child(4) {
+    grid-area: card4;
+  }
 }
