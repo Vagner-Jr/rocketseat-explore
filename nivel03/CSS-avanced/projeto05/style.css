@@ -30,6 +30,7 @@ body {
 header {
   margin-bottom: 8rem;
   text-align: center;
+  animation: topDown .7s ease forwards;
 }
 
 header p {
@@ -58,6 +59,7 @@ img {
 
 .card {
   position: relative;
+  animation: downTop .7s ease .2s backwards;
 }
 
 .card img {
@@ -96,6 +98,28 @@ img {
   font-weight: 400;
   color: var(--bg-secundary-dark);
   background: var(--bg-white);
+}
+
+@keyframes topDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downTop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 720px) {
