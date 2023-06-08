@@ -3,3 +3,77 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --font-epilogue: 'Epilogue', sans-serif;
+  --hue: 250;
+  --bg-primary: hsla(var(--hue), 22%, 20%, 1);
+  --bg-secudary-light: hsla(var(--hue), 50%, 80%, 1);
+  --bg-secundary-dark: hsla(var(--hue), 100%, 11%, 1);
+  --bg-white: #fff;
+}
+
+body {
+  padding: 0 1rem;
+  font-family: var(--font-epilogue);
+  color: var(--bg-white);
+  background: var(--bg-primary);
+}
+
+#app {
+  max-width: 33rem;
+  margin: 0 auto;
+  padding: 10rem 0 8rem;
+}
+
+header {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+header p {
+  margin-bottom: 1.6rem;
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--bg-secudary-light);
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.page {
+  position: relative;
+}
+
+.page img {
+  height: 40rem;
+  object-fit: cover;
+  border-radius: .6rem;
+}
+
+.page h2 {
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 4rem;
+}
+
+.page h2 span {
+  width: fit-content;
+  padding: 1rem 1.6rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--bg-secundary-dark);
+  background: var(--bg-white);
+}
