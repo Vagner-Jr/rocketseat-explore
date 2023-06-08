@@ -5,6 +5,7 @@
 }
 
 :root {
+  font-size: 62.5%;
   --font-epilogue: 'Epilogue', sans-serif;
   --hue: 250;
   --bg-primary: hsla(var(--hue), 22%, 20%, 1);
@@ -33,10 +34,17 @@ header {
 
 header p {
   margin-bottom: 1.6rem;
+  font-size: 1.6rem;
   line-height: 3.2rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--bg-secudary-light);
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4.8rem;
 }
 
 main {
@@ -48,27 +56,39 @@ img {
   width: 100%;
 }
 
-.page {
+.card {
   position: relative;
 }
 
-.page img {
+.card img {
   height: 40rem;
   object-fit: cover;
   border-radius: .6rem;
+  filter: brightness(0.8) blur(1px);
+  transition: .3s ease;
 }
 
-.page h2 {
+.card img:hover  {
+  filter: brightness(0.8)blur(0);
+  transform: scale(1.025);
+}
+
+.card h2 {
   position: absolute;
   bottom: 5.2rem;
   left: 2.8rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  font-size: 4rem;
+  font-size: clamp(4rem, 1rem + 3vw , 4rem);
+  transition: .3s ease;
 }
 
-.page h2 span {
+.card h2:hover {
+  transform: scale(1.025);
+}
+
+.card h2 span {
   width: fit-content;
   padding: 1rem 1.6rem;
   border-radius: 4rem;
