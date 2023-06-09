@@ -16,11 +16,11 @@
 
 body {
   font-family: 'Palanquin', sans-serif;
-  color: var(--bg-light);
+  color: var(--bg-dark-purple);
+  background: var(--bg-light);
 }
 
 #app {
-  max-width: 40.5rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -32,28 +32,29 @@ h1 , h2 {
 }
 
 header {
-  padding: 3.4rem 0;
   background: var(--bg-gray);
-}
-header h1 {
-  padding: 1rem 0;
-  font-size: 4rem;
-  line-height: 3.4rem;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.253);
-  background: var(--bg-dark-pink);
 }
 
 header img {
   margin-bottom: 3.4rem;
 }
 
-main {
-  padding: 1.4rem 3.2rem;
+header h1 {
+  padding: 1rem 0;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.253);
+  color: var(--bg-light);
+  background: var(--bg-dark-pink);
+}
+
+header p {
+  padding: 1.4rem 3.2rem 5rem;
   background: var(--bg-light);
 }
 
-main p {
-  color: var(--bg-dark-purple);
+main {
+  padding: 1.4rem 3.2rem;
 }
 
 .card {
@@ -79,4 +80,69 @@ main p {
   line-height: 3.4rem;
   color: var(--bg-dark-purple);
   background: var(--bg-pink);
+}
+
+footer {
+  font-size: 1.6rem;
+  padding: 2rem 0 4.6rem;
+}
+
+
+footer a {
+  font-weight: 800;
+  text-decoration: none;
+  color: #3c4453;
+}
+
+@media (min-width: 70rem) {
+  #app {
+    display: flex;
+  }
+
+  header {
+    max-width: 337px;
+  }
+
+  header p {
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    color: var(--bg-light);
+    background: var(--bg-gray);
+  }
+
+  main {
+    display: grid;
+    grid-template-areas: 
+    'massa1 shake massa2'
+    'picole1 shake picole2'
+    'picole1 acai picole2';
+  }
+
+  .card:nth-child(1) {
+    grid-area: massa1;
+  }
+
+  .card:nth-child(2) {
+    grid-area: picole1;
+  }
+
+  .card:nth-child(3) {
+    grid-area: shake;
+  }
+
+  .card:nth-child(4) {
+    grid-area: acai;
+  }
+
+  .card:nth-child(5) {
+    grid-area: massa2;
+  }
+
+  .card:nth-child(6) {
+    grid-area: picole2;
+  }
+
+  .card + .card {
+    margin-top: 0;
+  }
 }
