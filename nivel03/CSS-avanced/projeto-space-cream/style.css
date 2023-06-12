@@ -15,12 +15,14 @@
 }
 
 body {
+  height: 100vh;
   font-family: 'Palanquin', sans-serif;
   color: var(--bg-dark-purple);
   background: var(--bg-light);
 }
 
 #app {
+  height: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -35,8 +37,10 @@ header {
   background: var(--bg-gray);
 }
 
-header img {
-  margin-bottom: 3.4rem;
+header::before {
+  content: url(./assets/moon.svg);
+  display: block;
+  padding: 3.4rem;
 }
 
 header h1 {
@@ -81,41 +85,84 @@ main {
   color: var(--bg-dark-purple);
   background: var(--bg-pink);
 }
+footer{
+  display: none;
+  padding: 2rem 3.2rem;
+}
 
-footer {
+footer p {
+  padding-bottom: 4rem;
   font-size: 1.6rem;
-  padding: 2rem 0 4.6rem;
 }
 
 
-footer a {
+footer p a {
   font-weight: 800;
   text-decoration: none;
   color: #3c4453;
 }
 
-@media (min-width: 70rem) {
+@media (min-width:600px) {
   #app {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    'header main'
+    'header footer';
+    grid-template-columns: 1fr 4fr;
   }
 
   header {
-    max-width: 337px;
+    grid-area: header;
   }
 
+  header::before {
+    content: url(./assets/moon-line.svg);
+    display: block;
+  }
+  
   header p {
     margin-top: 5rem;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     color: var(--bg-light);
     background: var(--bg-gray);
   }
 
   main {
+    grid-area: main;
+    margin: 0 auto;
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    display: block;
+    grid-area: footer;
+  }
+}
+
+@media (min-width: 900px) {
+
+  #cards {
     display: grid;
     grid-template-areas: 
     'massa1 shake massa2'
     'picole1 shake picole2'
     'picole1 acai picole2';
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2.4rem;
+    padding: 4rem 10rem;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .card img {
+    height: 100%;
+    object-fit: cover;
   }
 
   .card:nth-child(1) {
@@ -127,11 +174,11 @@ footer a {
   }
 
   .card:nth-child(3) {
-    grid-area: shake;
+    grid-area: acai;
   }
 
   .card:nth-child(4) {
-    grid-area: acai;
+    grid-area: shake;
   }
 
   .card:nth-child(5) {
